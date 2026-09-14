@@ -40,3 +40,15 @@ Readable shapes and silhouettes before decorative assets. Persistent short contr
 
 ## Validation gate
 A new player should start interacting within 30 seconds. Run an entire successful objective, intentionally cause a recoverable mistake, and complete after recovery. Record automated browser checks separately from manual feel testing. Ask playtesters what caused their failure, whether correction felt possible, and whether they wanted another attempt. Choose the next milestone from this evidence rather than adding content automatically.
+
+## M1 implementation — 14 September 2026
+
+The first playable uses a fixed top-down warehouse with vertical height drawn as an offset and measurement line. One yellow machine, one pallet, one solid divider, one low green receiving surface. All visuals are procedural Canvas; no audio, camera shake, assets, or external requests. Pointer controls pause/restart; driving is keyboard-only.
+
+The fork support gate requires a local pallet distance of 65–99 units, lateral error at most 11 units, heading agreement within about 9 degrees (either pocket end), low vertical velocity, and tine height within 3.5 cm of pallet base. Raising after insertion acquires support at the existing relative position; it does not pull the pallet to the forks. Physical units are gameplay-scaled rather than calibrated meters.
+
+Steering is a simplified planar bicycle approximation with rear wheels visually opposite the requested nose turn. Acceleration, reverse braking, steering response, and drag run at 120 Hz. Frame catch-up is capped at 100 ms. Height-dependent friction capacity is reduced by forward tilt; lateral acceleration and forward tilt build slip above that capacity. Back tilt improves retention. Exceeding the slip budget or striking a solid releases the support constraint, with inherited velocity and gravity. Settled pallets retain their heading, making recovery predictable. The truck itself does not roll over; pitch/roll, pallet rotation on impact, tire friction circles, multi-body contacts, and fork flex are deferred.
+
+The shelf must contain the pallet's complete rotated footprint. Cargo cannot rise onto the shelf without being lifted. Below-shelf cargo collides with its face. Delivery requires actual shelf height, no fork support, near-zero horizontal speed, full tine clearance, and over one second settled. Carried cargo cannot score. World boundaries and solids keep dropped cargo within the work area.
+
+Validation evidence is in PLAYTEST.md. Next milestone: observe first-time players, especially whether the rear steering and narrow insertion window are readable; tune only after that feedback. No upgrades or extra jobs were added.

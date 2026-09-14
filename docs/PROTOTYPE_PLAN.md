@@ -16,3 +16,7 @@ No campaign, progression economy, networking, asset pipeline, or dependency-heav
 
 ## Later sharing milestone
 Use this repository's own remote and static hosting; follow the parent project's standing instructions when shipping. Keep published contents limited to this game. Record the verified public URL and commit in README. First request prepares for later external testing; never report a public link before deployment succeeds.
+
+## M1 outcome — 14 September 2026
+
+All six implementation steps are complete locally, with deterministic success/recovery routes and live keyboard/browser checks recorded in PLAYTEST.md. Public deployment verification is the remaining shipping step. External human feel testing remains a later milestone.
