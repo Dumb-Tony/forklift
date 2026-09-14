@@ -2,7 +2,7 @@
 
 A first playable warehouse precision game. Enter the pallet pockets with both forks, carry the load around a divider, and lower it onto a 24 cm receiving shelf. The job completes only after the pallet settles and the forks are clear.
 
-Public deployment: pending verification at https://dumb-tony.github.io/forklift/.
+**[Play Forklift / Bay 01](https://dumb-tony.github.io/forklift/)** — public GitHub Pages build, browser-verified 14 September 2026.
 Repository: https://github.com/Dumb-Tony/forklift.
 
 ## Play locally
@@ -23,7 +23,7 @@ Approach slowly with forks at floor level. When **POCKETS ALIGNED** appears, lif
 
 ## First slice status
 
-Implemented and locally browser-tested: rear steering, acceleration/braking, alignment-gated fork support, height/tilt-dependent load slip, recoverable drops, shelf support and clearance checks, pause/reset, responsive presentation. Automated clean and recovery routes both complete. Human steering-feel and first-time-player testing remain open.
+Implemented and browser-tested locally and on the public deployment: rear steering, acceleration/braking, alignment-gated fork support, height/tilt-dependent load slip, recoverable drops, shelf support and clearance checks, pause/reset, responsive presentation. Automated clean and recovery routes both complete. Human steering-feel and first-time-player testing remain open.
 
 This is a simplified planar machine model with explicit vertical load motion, not a full industrial or rigid-body simulation. Pallets retain orientation after falling, collision shapes are conservative, and the truck does not roll over. See `docs/GDD.md` for exact boundaries and `docs/PLAYTEST.md` for actual evidence.
 

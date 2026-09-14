@@ -1,9 +1,17 @@
 # External browser playtesting
 
-Each game owns a separate Git repository and eventual remote. Inspect git remote -v before configuring a remote to avoid duplicates. Publish only this game's contents.
+**Play:** https://dumb-tony.github.io/forklift/
 
-The first build is a self-contained root index.html, with relative paths only if assets are added later. GitHub Pages can serve it from main at the repository root; .nojekyll disables Jekyll processing. No build output, package registry, or server secrets are required.
+**Repository:** https://github.com/Dumb-Tony/forklift
 
-Before shipping: verify local play, commit intended files, inspect the staged contents, create or reuse the authenticated user's game-specific repository according to C:\GPT_DEV\AGENTS.md, push, enable static deployment, wait for completion, and verify the public URL in a browser. Record the URL in README. Do not claim deployment readiness from a local preview alone. Do not include unrelated projects, credentials, or local diagnostics.
+GitHub Pages serves `main` at the repository root with `.nojekyll`. The first playable gameplay commit is `4f1e725`. The public game was verified in Edge on 14 September 2026 with the complete automated success/recovery suite. README and PLAYTEST distinguish these automated checks from human feel testing.
 
-No license is selected yet; decide redistribution terms before accepting outside contributions. No remote or deployment exists at initialization.
+## Invite a first playtester
+
+Send the public play URL with this brief: “Use a desktop keyboard. Pick up the pallet, carry it around the divider, and set it on the green receiving shelf. Try to recover from a dropped load without restarting.” Let them discover the route. Ask what caused failures, whether they could correct them, and whether they want another attempt. Record browser, viewport, first-lift time, completion attempts, and steering feedback in PLAYTEST.md.
+
+## Ship later edits
+
+Work only in this repository. Inspect `git remote -v`, test locally, review intended files, commit, push `main`, wait for the Pages build to finish, and verify the public URL. `tests/playtest.cjs` accepts `GAME_URL` for public regression checks. Screenshots are ignored; no dependencies, credentials, or sibling projects are shipped. Keep `index.html` self-contained so direct local opening also works.
+
+No license is selected yet; decide redistribution terms before accepting outside contributions.
