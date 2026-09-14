@@ -2,7 +2,7 @@
 
 A first playable warehouse precision game. Enter the pallet pockets with both forks, carry the load around a divider, and lower it onto a 24 cm receiving shelf. The job completes only after the pallet settles and the forks are clear.
 
-**[Play Forklift / Bay 01](https://dumb-tony.github.io/forklift/)** — public GitHub Pages build, browser-verified 14 September 2026.
+**[Play Forklift / Bay 01](https://dumb-tony.github.io/forklift/)** â€” public GitHub Pages build, browser-verified 14 September 2026.
 Repository: https://github.com/Dumb-Tony/forklift.
 
 ## Play locally

@@ -13,6 +13,7 @@ Tested the self-contained local HTML with Playwright driving installed Microsoft
 | Held load in target | No win |
 | Pallet resting on shelf with forks inside | No win |
 | Settled shelf load after reversing | Win after more than 1 second with forks clear |
+| Overhanging shelf placement | Lowered cargo falls to floor outside shelf face; cannot levitate or score |
 | High versus low turn | Same loaded turn retains cargo at 12.6 cm; at 100 cm it slips and settles on the floor |
 | Full recovery route | Forward tilt drops raised cargo; lower forks, square up, re-lift, complete delivery; win at 25.09 simulated seconds with one recorded drop |
 | Pause/resume/reset | Simulation freezes on pause, resumes, and reset restores initial machine/pallet/objective |
@@ -30,3 +31,7 @@ During implementation, testing exposed an incorrect shelf-surface calculation th
 No human playtester session has happened. Automated clean-route times are reproducibility evidence, not target completion times. Browser checks covered Edge/Chromium; Firefox, Safari, touch, gamepads, and assistive-technology playability have not been validated. There is no sound or camera shake. Collision circles and constrained load support are intentionally simplified; dropped loads do not tumble or change heading, and the truck cannot tip over.
 
 For a first human session: provide the public link and no route coaching. Ask the player to finish one delivery, intentionally drop/retrieve the pallet, and retry. Record time to first lift, failed alignment attempts, cause-of-drop explanation, whether recovery felt possible, and whether another shift felt appealing. Focus the next tuning pass on steering/braking feel and pocket readability before adding content.
+
+## Public deployment verification
+
+GitHub Pages deployed gameplay commit `4f1e725fa5ef20496cc36c14512141346f706797` successfully on 14 September 2026. The full automated suite was then run against https://dumb-tony.github.io/forklift/ in Edge, including the additional overhanging shelf regression: all checks passed with the same clean/recovery outcomes and zero browser exceptions. Initial sandbox network denial was resolved by running the authorized public-browser check with network access; there is no remaining publishing blocker.
